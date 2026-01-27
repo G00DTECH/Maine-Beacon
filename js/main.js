@@ -129,11 +129,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16);
     }
 
-    // Trigger counter animation when stats section is visible
+    // Trigger counter animation when section is visible
     const statsObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                // Handle both .stat-number and .metric-number elements
+                const statNumbers = entry.target.querySelectorAll('.stat-number, .metric-number');
                 statNumbers.forEach(stat => {
                     const target = parseInt(stat.getAttribute('data-target'));
                     if (target) {
@@ -143,10 +144,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.classList.add('counted');
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
+    // Observe statistics section
     const statsSection = document.querySelector('.statistics');
     if (statsSection) {
         statsObserver.observe(statsSection);
+    }
+
+    // Observe impact section
+    const impactSection = document.querySelector('.impact');
+    if (impactSection) {
+        statsObserver.observe(impactSection);
     }
 });
