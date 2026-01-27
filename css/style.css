@@ -99,16 +99,11 @@ header {
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--stormy-navy);
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logo-icon {
-    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -142,23 +137,28 @@ nav a:hover {
 .btn-primary {
     background-color: var(--lifeline-red);
     color: var(--white);
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
 }
 
 .btn-primary:hover {
     background-color: #c62828;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.3);
+    box-shadow: 0 6px 16px rgba(229, 57, 53, 0.4);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--white);
     border: 2px solid var(--white);
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
 }
 
 .btn-secondary:hover {
     background-color: var(--white);
     color: var(--stormy-navy);
+    transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -201,9 +201,11 @@ nav a:hover {
 
 .hero-content h1 {
     color: var(--white);
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+    letter-spacing: -0.5px;
 }
 
 .hero-content p {
@@ -240,17 +242,27 @@ nav a:hover {
 }
 
 .stat-icon {
-    font-size: 4rem;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    background-color: rgba(33, 150, 243, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
     color: var(--beacon-blue);
-    margin-bottom: 1rem;
+    font-weight: 700;
+    border: 3px solid var(--beacon-blue);
 }
 
 .stat-number {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: var(--lifeline-red);
     font-weight: 900;
     line-height: 1;
+    margin-bottom: 0.5rem;
 }
 
 .stat-label {
@@ -271,7 +283,7 @@ nav a:hover {
 
 /* Solutions Section */
 .solutions {
-    padding: 5rem 20px;
+    padding: 6rem 20px;
 }
 
 .section-title {
@@ -340,13 +352,14 @@ nav a:hover {
 
 /* Values Section */
 .values {
-    padding: 5rem 20px;
+    padding: 6rem 20px;
+    background-color: var(--white);
 }
 
 .values-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 3.5rem;
     margin-top: 3rem;
 }
 
@@ -356,8 +369,16 @@ nav a:hover {
 }
 
 .value-icon {
-    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(33, 150, 243, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
     color: var(--beacon-blue);
+    font-weight: 700;
     flex-shrink: 0;
 }
 
